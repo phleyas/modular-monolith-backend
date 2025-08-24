@@ -1,0 +1,515 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9E368CB6-B161-A93B-E272-F3C2F9052FEC}|AirQuality.Api.csproj|c:\\users\\icarv\\repos\\air-quality-2\\airquality.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E368CB6-B161-A93B-E272-F3C2F9052FEC}|AirQuality.Api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89189F27-8489-4F43-9612-702AF4A5B03D}|..\\AirQuality.Locations\\AirQuality.Locations.csproj|c:\\users\\icarv\\repos\\air-quality-2\\airquality.locations\\endpoints\\getlocations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8C4AED5-C949-45EA-85F1-186833CECD0F}|..\\AirQuality.Geocoding\\AirQuality.Geocoding.csproj|c:\\users\\icarv\\repos\\air-quality-2\\airquality.geocoding\\airquality.geocoding.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E1891FC-56FE-433D-84B0-E7B1527C81D1}|..\\AirQuality.OpenAQ\\AirQuality.OpenAQ.csproj|c:\\users\\icarv\\repos\\air-quality-2\\airquality.openaq\\airquality.openaq.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFD3B577-293D-44D6-81F1-5661AC39C15D}|..\\AirQuality.OpenAQ.Contracts\\AirQuality.OpenAQ.Contracts.csproj|c:\\users\\icarv\\repos\\air-quality-2\\airquality.openaq.contracts\\airquality.openaq.contracts.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8C4AED5-C949-45EA-85F1-186833CECD0F}|..\\AirQuality.Geocoding\\AirQuality.Geocoding.csproj|c:\\users\\icarv\\repos\\air-quality-2\\airquality.geocoding\\nominatimresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E368CB6-B161-A93B-E272-F3C2F9052FEC}|AirQuality.Api.csproj|c:\\users\\icarv\\repos\\air-quality-2\\airquality.api\\airquality.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{9E368CB6-B161-A93B-E272-F3C2F9052FEC}|AirQuality.Api.csproj|solutionrelative:airquality.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89189F27-8489-4F43-9612-702AF4A5B03D}|..\\AirQuality.Locations\\AirQuality.Locations.csproj|c:\\users\\icarv\\repos\\air-quality-2\\airquality.locations\\endpoints\\locationsresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8C4AED5-C949-45EA-85F1-186833CECD0F}|..\\AirQuality.Geocoding\\AirQuality.Geocoding.csproj|c:\\users\\icarv\\repos\\air-quality-2\\airquality.geocoding\\getcoordinatesbylocationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{043E7476-090D-4DEB-8137-2CC642B3B4C1}|..\\AirQuality.Geocoding.Contracts\\AirQuality.Geocoding.Contracts.csproj|c:\\users\\icarv\\repos\\air-quality-2\\airquality.geocoding.contracts\\getcoordinatesbylocationcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFD3B577-293D-44D6-81F1-5661AC39C15D}|..\\AirQuality.OpenAQ.Contracts\\AirQuality.OpenAQ.Contracts.csproj|c:\\users\\icarv\\repos\\air-quality-2\\airquality.openaq.contracts\\getlocationsbycoordinatescommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E1891FC-56FE-433D-84B0-E7B1527C81D1}|..\\AirQuality.OpenAQ\\AirQuality.OpenAQ.csproj|c:\\users\\icarv\\repos\\air-quality-2\\airquality.openaq\\getlocationsbycoordinateshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E1891FC-56FE-433D-84B0-E7B1527C81D1}|..\\AirQuality.OpenAQ\\AirQuality.OpenAQ.csproj|c:\\users\\icarv\\repos\\air-quality-2\\airquality.openaq\\isensorlocationsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E1891FC-56FE-433D-84B0-E7B1527C81D1}|..\\AirQuality.OpenAQ\\AirQuality.OpenAQ.csproj|c:\\users\\icarv\\repos\\air-quality-2\\airquality.openaq\\sensorlocationsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E1891FC-56FE-433D-84B0-E7B1527C81D1}|..\\AirQuality.OpenAQ\\AirQuality.OpenAQ.csproj|c:\\users\\icarv\\repos\\air-quality-2\\airquality.openaq\\openaqmoduleextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFD3B577-293D-44D6-81F1-5661AC39C15D}|..\\AirQuality.OpenAQ.Contracts\\AirQuality.OpenAQ.Contracts.csproj|c:\\users\\icarv\\repos\\air-quality-2\\airquality.openaq.contracts\\sensorlocationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFD3B577-293D-44D6-81F1-5661AC39C15D}|..\\AirQuality.OpenAQ.Contracts\\AirQuality.OpenAQ.Contracts.csproj|c:\\users\\icarv\\repos\\air-quality-2\\airquality.openaq.contracts\\openaqresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFD3B577-293D-44D6-81F1-5661AC39C15D}|..\\AirQuality.OpenAQ.Contracts\\AirQuality.OpenAQ.Contracts.csproj|c:\\users\\icarv\\repos\\air-quality-2\\airquality.openaq.contracts\\countrydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89189F27-8489-4F43-9612-702AF4A5B03D}|..\\AirQuality.Locations\\AirQuality.Locations.csproj|c:\\users\\icarv\\repos\\air-quality-2\\airquality.locations\\airquality.locations.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8C4AED5-C949-45EA-85F1-186833CECD0F}|..\\AirQuality.Geocoding\\AirQuality.Geocoding.csproj|c:\\users\\icarv\\repos\\air-quality-2\\airquality.geocoding\\geocodingmoduleextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8C4AED5-C949-45EA-85F1-186833CECD0F}|..\\AirQuality.Geocoding\\AirQuality.Geocoding.csproj|c:\\users\\icarv\\repos\\air-quality-2\\airquality.geocoding\\nominatimgeocodingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8C4AED5-C949-45EA-85F1-186833CECD0F}|..\\AirQuality.Geocoding\\AirQuality.Geocoding.csproj|c:\\users\\icarv\\repos\\air-quality-2\\airquality.geocoding\\igeocodingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89189F27-8489-4F43-9612-702AF4A5B03D}|..\\AirQuality.Locations\\AirQuality.Locations.csproj|c:\\users\\icarv\\repos\\air-quality-2\\airquality.locations\\endpoints\\locationsrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E368CB6-B161-A93B-E272-F3C2F9052FEC}|AirQuality.Api.csproj|c:\\users\\icarv\\repos\\air-quality-2\\airquality.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9E368CB6-B161-A93B-E272-F3C2F9052FEC}|AirQuality.Api.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Nominatim\\AirQuality.Geocoding.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Nominatim\\GeocodingModuleExtension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Nominatim\\IGeocodingService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Nominatim\\GeoLocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Nominatim\\NominatimGeocodingService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Nominatim\\NominatimResponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Geolocation.Contracts\\AirQuality.Geocoding.Contracts.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Geolocation.Contracts\\GetCoordinatesByLocationCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Geolocation.Contracts\\GeoLocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AirQuality.Geocoding.csproj",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Geocoding\\AirQuality.Geocoding.csproj",
+              "RelativeDocumentMoniker": "..\\AirQuality.Geocoding\\AirQuality.Geocoding.csproj",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Geocoding\\AirQuality.Geocoding.csproj",
+              "RelativeToolTip": "..\\AirQuality.Geocoding\\AirQuality.Geocoding.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-24T11:10:43.834Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Api\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T09:17:07.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AirQuality.OpenAQ.Contracts.csproj",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.OpenAQ.Contracts\\AirQuality.OpenAQ.Contracts.csproj",
+              "RelativeDocumentMoniker": "..\\AirQuality.OpenAQ.Contracts\\AirQuality.OpenAQ.Contracts.csproj",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.OpenAQ.Contracts\\AirQuality.OpenAQ.Contracts.csproj",
+              "RelativeToolTip": "..\\AirQuality.OpenAQ.Contracts\\AirQuality.OpenAQ.Contracts.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-24T12:22:15.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GetLocations.cs",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Locations\\Endpoints\\GetLocations.cs",
+              "RelativeDocumentMoniker": "..\\AirQuality.Locations\\Endpoints\\GetLocations.cs",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Locations\\Endpoints\\GetLocations.cs",
+              "RelativeToolTip": "..\\AirQuality.Locations\\Endpoints\\GetLocations.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAgwC8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T11:46:07.824Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AirQuality.OpenAQ.csproj",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.OpenAQ\\AirQuality.OpenAQ.csproj",
+              "RelativeDocumentMoniker": "..\\AirQuality.OpenAQ\\AirQuality.OpenAQ.csproj",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.OpenAQ\\AirQuality.OpenAQ.csproj",
+              "RelativeToolTip": "..\\AirQuality.OpenAQ\\AirQuality.OpenAQ.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-24T10:25:17.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NominatimResponse.cs",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Geocoding\\NominatimResponse.cs",
+              "RelativeDocumentMoniker": "..\\AirQuality.Geocoding\\NominatimResponse.cs",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Geocoding\\NominatimResponse.cs",
+              "RelativeToolTip": "..\\AirQuality.Geocoding\\NominatimResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T14:11:48.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AirQuality.Api.csproj",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Api\\AirQuality.Api.csproj",
+              "RelativeDocumentMoniker": "AirQuality.Api.csproj",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Api\\AirQuality.Api.csproj",
+              "RelativeToolTip": "AirQuality.Api.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-24T10:12:02.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LocationsResponse.cs",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Locations\\Endpoints\\LocationsResponse.cs",
+              "RelativeDocumentMoniker": "..\\AirQuality.Locations\\Endpoints\\LocationsResponse.cs",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Locations\\Endpoints\\LocationsResponse.cs",
+              "RelativeToolTip": "..\\AirQuality.Locations\\Endpoints\\LocationsResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T11:45:34.98Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GetCoordinatesByLocationHandler.cs",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Geocoding\\GetCoordinatesByLocationHandler.cs",
+              "RelativeDocumentMoniker": "..\\AirQuality.Geocoding\\GetCoordinatesByLocationHandler.cs",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Geocoding\\GetCoordinatesByLocationHandler.cs",
+              "RelativeToolTip": "..\\AirQuality.Geocoding\\GetCoordinatesByLocationHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T13:45:39.186Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GetCoordinatesByLocationCommand.cs",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Geocoding.Contracts\\GetCoordinatesByLocationCommand.cs",
+              "RelativeDocumentMoniker": "..\\AirQuality.Geocoding.Contracts\\GetCoordinatesByLocationCommand.cs",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Geocoding.Contracts\\GetCoordinatesByLocationCommand.cs",
+              "RelativeToolTip": "..\\AirQuality.Geocoding.Contracts\\GetCoordinatesByLocationCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T15:12:45.323Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GetLocationsByCoordinatesCommand.cs",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.OpenAQ.Contracts\\GetLocationsByCoordinatesCommand.cs",
+              "RelativeDocumentMoniker": "..\\AirQuality.OpenAQ.Contracts\\GetLocationsByCoordinatesCommand.cs",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.OpenAQ.Contracts\\GetLocationsByCoordinatesCommand.cs",
+              "RelativeToolTip": "..\\AirQuality.OpenAQ.Contracts\\GetLocationsByCoordinatesCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T15:13:58.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "GetLocationsByCoordinatesHandler.cs",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.OpenAQ\\GetLocationsByCoordinatesHandler.cs",
+              "RelativeDocumentMoniker": "..\\AirQuality.OpenAQ\\GetLocationsByCoordinatesHandler.cs",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.OpenAQ\\GetLocationsByCoordinatesHandler.cs",
+              "RelativeToolTip": "..\\AirQuality.OpenAQ\\GetLocationsByCoordinatesHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAACTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T15:19:38.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ISensorLocationsService.cs",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.OpenAQ\\ISensorLocationsService.cs",
+              "RelativeDocumentMoniker": "..\\AirQuality.OpenAQ\\ISensorLocationsService.cs",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.OpenAQ\\ISensorLocationsService.cs",
+              "RelativeToolTip": "..\\AirQuality.OpenAQ\\ISensorLocationsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T11:01:40.052Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SensorLocationsService.cs",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.OpenAQ\\SensorLocationsService.cs",
+              "RelativeDocumentMoniker": "..\\AirQuality.OpenAQ\\SensorLocationsService.cs",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.OpenAQ\\SensorLocationsService.cs",
+              "RelativeToolTip": "..\\AirQuality.OpenAQ\\SensorLocationsService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAwBkAAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T10:57:46.639Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "OpenAQModuleExtension.cs",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.OpenAQ\\OpenAQModuleExtension.cs",
+              "RelativeDocumentMoniker": "..\\AirQuality.OpenAQ\\OpenAQModuleExtension.cs",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.OpenAQ\\OpenAQModuleExtension.cs",
+              "RelativeToolTip": "..\\AirQuality.OpenAQ\\OpenAQModuleExtension.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T11:00:19.378Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SensorLocationDTO.cs",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.OpenAQ.Contracts\\SensorLocationDTO.cs",
+              "RelativeDocumentMoniker": "..\\AirQuality.OpenAQ.Contracts\\SensorLocationDTO.cs",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.OpenAQ.Contracts\\SensorLocationDTO.cs",
+              "RelativeToolTip": "..\\AirQuality.OpenAQ.Contracts\\SensorLocationDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T15:10:37.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "OpenAQResponse.cs",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.OpenAQ.Contracts\\OpenAQResponse.cs",
+              "RelativeDocumentMoniker": "..\\AirQuality.OpenAQ.Contracts\\OpenAQResponse.cs",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.OpenAQ.Contracts\\OpenAQResponse.cs",
+              "RelativeToolTip": "..\\AirQuality.OpenAQ.Contracts\\OpenAQResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T15:10:26.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CountryDTO.cs",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.OpenAQ.Contracts\\CountryDTO.cs",
+              "RelativeDocumentMoniker": "..\\AirQuality.OpenAQ.Contracts\\CountryDTO.cs",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.OpenAQ.Contracts\\CountryDTO.cs",
+              "RelativeToolTip": "..\\AirQuality.OpenAQ.Contracts\\CountryDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T15:10:16.031Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AirQuality.Locations.csproj",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Locations\\AirQuality.Locations.csproj",
+              "RelativeDocumentMoniker": "..\\AirQuality.Locations\\AirQuality.Locations.csproj",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Locations\\AirQuality.Locations.csproj",
+              "RelativeToolTip": "..\\AirQuality.Locations\\AirQuality.Locations.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-24T09:32:11.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "AirQuality.Geocoding.Contracts.csproj",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Geolocation.Contracts\\AirQuality.Geocoding.Contracts.csproj",
+              "RelativeDocumentMoniker": "..\\AirQuality.Geolocation.Contracts\\AirQuality.Geocoding.Contracts.csproj",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Geolocation.Contracts\\AirQuality.Geocoding.Contracts.csproj",
+              "RelativeToolTip": "..\\AirQuality.Geolocation.Contracts\\AirQuality.Geocoding.Contracts.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-24T13:37:58.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "GeocodingModuleExtension.cs",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Geocoding\\GeocodingModuleExtension.cs",
+              "RelativeDocumentMoniker": "..\\AirQuality.Geocoding\\GeocodingModuleExtension.cs",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Geocoding\\GeocodingModuleExtension.cs",
+              "RelativeToolTip": "..\\AirQuality.Geocoding\\GeocodingModuleExtension.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T11:10:49.108Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "GetCoordinatesByLocationCommand.cs",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Geolocation.Contracts\\GetCoordinatesByLocationCommand.cs",
+              "RelativeDocumentMoniker": "..\\AirQuality.Geolocation.Contracts\\GetCoordinatesByLocationCommand.cs",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Geolocation.Contracts\\GetCoordinatesByLocationCommand.cs",
+              "RelativeToolTip": "..\\AirQuality.Geolocation.Contracts\\GetCoordinatesByLocationCommand.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T13:39:30.371Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "GeoLocation.cs",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Geolocation.Contracts\\GeoLocation.cs",
+              "RelativeDocumentMoniker": "..\\AirQuality.Geolocation.Contracts\\GeoLocation.cs",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Geolocation.Contracts\\GeoLocation.cs",
+              "RelativeToolTip": "..\\AirQuality.Geolocation.Contracts\\GeoLocation.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T13:48:26.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "NominatimGeocodingService.cs",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Geocoding\\NominatimGeocodingService.cs",
+              "RelativeDocumentMoniker": "..\\AirQuality.Geocoding\\NominatimGeocodingService.cs",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Geocoding\\NominatimGeocodingService.cs",
+              "RelativeToolTip": "..\\AirQuality.Geocoding\\NominatimGeocodingService.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAQwCEAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T11:13:26.942Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IGeocodingService.cs",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Geocoding\\IGeocodingService.cs",
+              "RelativeDocumentMoniker": "..\\AirQuality.Geocoding\\IGeocodingService.cs",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Geocoding\\IGeocodingService.cs",
+              "RelativeToolTip": "..\\AirQuality.Geocoding\\IGeocodingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T13:17:54.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "LocationsRequest.cs",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Locations\\Endpoints\\LocationsRequest.cs",
+              "RelativeDocumentMoniker": "..\\AirQuality.Locations\\Endpoints\\LocationsRequest.cs",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Locations\\Endpoints\\LocationsRequest.cs",
+              "RelativeToolTip": "..\\AirQuality.Locations\\Endpoints\\LocationsRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T13:40:47.918Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AirQuality.Geocoding.csproj",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Nominatim\\AirQuality.Geocoding.csproj",
+              "RelativeDocumentMoniker": "..\\AirQuality.Nominatim\\AirQuality.Geocoding.csproj",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Nominatim\\AirQuality.Geocoding.csproj",
+              "RelativeToolTip": "..\\AirQuality.Nominatim\\AirQuality.Geocoding.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-24T10:17:10.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "GeocodingModuleExtension.cs",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Nominatim\\GeocodingModuleExtension.cs",
+              "RelativeDocumentMoniker": "..\\AirQuality.Nominatim\\GeocodingModuleExtension.cs",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Nominatim\\GeocodingModuleExtension.cs",
+              "RelativeToolTip": "..\\AirQuality.Nominatim\\GeocodingModuleExtension.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T10:07:02.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Api\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAA4AAAAAAAAAAABRwAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-24T10:46:13.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IGeocodingService.cs",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Nominatim\\IGeocodingService.cs",
+              "RelativeDocumentMoniker": "..\\AirQuality.Nominatim\\IGeocodingService.cs",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Nominatim\\IGeocodingService.cs",
+              "RelativeToolTip": "..\\AirQuality.Nominatim\\IGeocodingService.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T09:51:51.076Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "GeoLocation.cs",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Nominatim\\GeoLocation.cs",
+              "RelativeDocumentMoniker": "..\\AirQuality.Nominatim\\GeoLocation.cs",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Nominatim\\GeoLocation.cs",
+              "RelativeToolTip": "..\\AirQuality.Nominatim\\GeoLocation.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T09:55:30.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "NominatimGeocodingService.cs",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Nominatim\\NominatimGeocodingService.cs",
+              "RelativeDocumentMoniker": "..\\AirQuality.Nominatim\\NominatimGeocodingService.cs",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Nominatim\\NominatimGeocodingService.cs",
+              "RelativeToolTip": "..\\AirQuality.Nominatim\\NominatimGeocodingService.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T09:40:06.814Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "NominatimResponse.cs",
+              "DocumentMoniker": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Nominatim\\NominatimResponse.cs",
+              "RelativeDocumentMoniker": "..\\AirQuality.Nominatim\\NominatimResponse.cs",
+              "ToolTip": "C:\\Users\\icarv\\repos\\air-quality-2\\AirQuality.Nominatim\\NominatimResponse.cs",
+              "RelativeToolTip": "..\\AirQuality.Nominatim\\NominatimResponse.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T09:42:22.453Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

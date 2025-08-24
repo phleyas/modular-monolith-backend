@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>c628df82-81c5-413e-81bc-03f3f0bf57c2</UserSecretsId>
+  </PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="FastEndpoints" Version="7.0.1" />
+		<PackageReference Include="FastEndpoints.Generator" Version="7.0.1" PrivateAssets="all">
+		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
+		<PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\AirQuality.Geocoding.Contracts\AirQuality.Geocoding.Contracts.csproj" />
+	</ItemGroup>
+</Project>

@@ -1,0 +1,43 @@
+services:
+    # airquality.database:
+    #     image: postgres:latest
+    #     container_name: airquality.database
+    #     environment:
+    #     - POSTGRES_DB=airquality
+    #     - POSTGRES_USER=postgres
+    #     - POSTGRES_PASSWORD=postgres
+    #     # volumes:
+    #     #   - ./.containers/products-db:/var/lib/postgresql/data
+    #     ports:
+    #         - 5432:5432
+    #     healthcheck:
+    #      test: ["CMD-SHELL", "pg_isready -U postgres"]
+    #      interval: 5s
+    #      timeout: 5s
+    #      retries: 5
+
+    airquality.api:
+        image: ${DOCKER_REGISTRY-}airqualityapi
+        build:
+            context: .
+            dockerfile: AirQuality.Api/Dockerfile
+        ports:
+            - "5000:5000"
+            - "5001:5001"
+        secrets:
+            - source: nominatim_user_agent
+              target: nominatim_user_agent
+              mode: 0444
+            - source: nominatim_referer
+              target: nominatim_referer
+              mode: 0444
+            - source: openaq_api_key
+              target: openaq_api_key
+              mode: 0444
+secrets:
+   nominatim_user_agent:
+        file: ../secrets/nominatim_user_agent.txt  
+   nominatim_referer:
+        file: ../secrets/nominatim_referer.txt  
+   openaq_api_key:
+        file: ../secrets/x-api-key.txt   

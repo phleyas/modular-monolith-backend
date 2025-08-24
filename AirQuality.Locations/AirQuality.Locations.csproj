@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="FastEndpoints" Version="7.0.1" />
+		<PackageReference Include="FastEndpoints.Generator" Version="7.0.1" PrivateAssets="all" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\AirQuality.Geocoding.Contracts\AirQuality.Geocoding.Contracts.csproj" />
+	  <ProjectReference Include="..\AirQuality.OpenAQ\AirQuality.OpenAQ.csproj" />
+	</ItemGroup>
+</Project>
