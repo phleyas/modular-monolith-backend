@@ -3,7 +3,7 @@ using FastEndpoints;
 
 namespace AirQuality.OpenAQ
 {
-    public class GetLocationsByCoordinatesHandler : ICommandHandler<GetLocationsByCoordinatesCommand, OpenAQResponse<SensorLocationDTO>>
+    internal class GetLocationsByCoordinatesHandler : ICommandHandler<GetLocationsByCoordinatesCommand, OpenAQResponse<SensorLocationDTO>>
     {
         private readonly ISensorLocationsService _sensorLocationsService;
         public GetLocationsByCoordinatesHandler(ISensorLocationsService sensorLocationsService)
