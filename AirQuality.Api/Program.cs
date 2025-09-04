@@ -40,7 +40,7 @@ builder.Services.AddFastEndpoints(o =>
     o.SourceGeneratorDiscoveredTypes.AddRange(AirQuality.Locations.DiscoveredTypes.All);
     o.SourceGeneratorDiscoveredTypes.AddRange(AirQuality.Geocoding.DiscoveredTypes.All);
     o.SourceGeneratorDiscoveredTypes.AddRange(AirQuality.OpenAQ.DiscoveredTypes.All);
-}).SwaggerDocument();
+}).SwaggerDocument(o => o.ShortSchemaNames = true);
 
 builder.Services.AddHttpClient();
 
@@ -51,6 +51,9 @@ var app = builder.Build();
 
 app.UseCors("AllowFrontend");
 
-app.UseFastEndpoints().UseSwaggerGen();
+app.UseFastEndpoints(c =>
+{
+    c.Endpoints.ShortNames = true;
+}).UseSwaggerGen();
 
 app.Run();
