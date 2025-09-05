@@ -26,7 +26,7 @@ namespace AirQuality.OpenAQ
                 }
             });
 
-            var defaultConnection = config["ConnectionStrings:OpenAQConnection"];
+            var defaultConnection = config["connection_strings_open_aq"];
             services.AddDbContext<OpenAQDbContext>(options =>
                            options.UseNpgsql(defaultConnection));
             services.AddDatabaseDeveloperPageExceptionFilter();
