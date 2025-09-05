@@ -7,7 +7,7 @@ namespace AirQuality.Locations.Endpoints
     {
         public override void Configure()
         {
-            Get("/locations/{LocationId}/sensors");
+            Get("/sensors");
             AllowAnonymous();
         }
         public override async Task HandleAsync(SensorsRequest req, CancellationToken ct)
