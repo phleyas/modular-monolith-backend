@@ -50,15 +50,15 @@ namespace AirQuality.OpenAQ
             return result;
         }
 
-        public async Task<OpenAQResponse<MeasurementDTO>> GetMeasurementsByLocationIdAsync(int id)
+        public async Task<OpenAQResponse<SensorDTO>> GetMeasurementsByLocationIdAsync(int id)
         {
             var response = await _httpClient.GetAsync(
-             $"locations/{id}/latest"
+             $"locations/{id}/sensors"
          );
             var json = await response.Content.ReadAsStringAsync();
             try
             {
-                var result = JsonSerializer.Deserialize<OpenAQResponse<MeasurementDTO>>(json, _jsonOptions);
+                var result = JsonSerializer.Deserialize<OpenAQResponse<SensorDTO>>(json, _jsonOptions);
                 return result;
             }
             catch (Exception e)

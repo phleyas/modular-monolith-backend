@@ -1,6 +1,6 @@
 ﻿namespace AirQuality.Locations.Endpoints
 {
-    public class LatestMeasurementsRequest
+    public class SensorsRequest
     {
         public int? LocationId { get; set; }
     }

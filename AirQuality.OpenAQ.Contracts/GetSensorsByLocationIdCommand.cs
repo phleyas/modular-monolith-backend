@@ -2,7 +2,7 @@
 
 namespace AirQuality.OpenAQ.Contracts
 {
-    public class GetLatestMeassurementsByLocationIdCommand : ICommand<List<MeasurementDTO>>
+    public class GetSensorsByLocationIdCommand : ICommand<List<SensorDTO>>
     {
         public int locationId;
     }

@@ -47,15 +47,6 @@ namespace AirQuality.OpenAQ.Contracts
         [JsonPropertyName("longitude")]
         public double Longitude { get; set; }
     }
-    public class SensorDTO
-    {
-        [JsonPropertyName("id")]
-        public int Id { get; set; }
-        [JsonPropertyName("name")]
-        public string Name { get; set; }
-        [JsonPropertyName("parameter")]
-        public ParameterDTO? Parameter { get; set; }
-    }
     public class IdNameDTO
     {
         [JsonPropertyName("id")]
@@ -63,15 +54,7 @@ namespace AirQuality.OpenAQ.Contracts
         [JsonPropertyName("name")]
         public string? Name { get; set; }
     }
-    public class DateDTO
-    {
-        public int Id { get; set; }
-        [JsonPropertyName("utc")]
-        public DateTime? Utc { get; set; }
-        [JsonPropertyName("local")]
-        public DateTime? Local { get; set; }
 
-    }
     public class LicenceDTO
     {
         [JsonPropertyName("id")]
