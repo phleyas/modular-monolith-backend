@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using AirQuality.OpenAQ.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ILogger = Serilog.ILogger;
 
@@ -11,7 +13,7 @@ namespace AirQuality.OpenAQ
          )
         {
 
-            services.AddHttpClient<ISensorLocationsService, SensorLocationsService>((sp, client) =>
+            services.AddHttpClient<IOpenAQService, OpenAQService>((sp, client) =>
             {
                 client.BaseAddress = new Uri("https://api.openaq.org/v3/");
 
@@ -23,6 +25,14 @@ namespace AirQuality.OpenAQ
                     client.DefaultRequestHeaders.Add("X-API-Key", apiKey);
                 }
             });
+
+            var defaultConnection = config["ConnectionStrings:OpenAQConnection"];
+            services.AddDbContext<OpenAQDbContext>(options =>
+                           options.UseNpgsql(defaultConnection));
+            services.AddDatabaseDeveloperPageExceptionFilter();
+
+            services.AddScoped<IParametersRepository, ParametersRepository>();
+
 
             logger.Information("{Module} module services registered", "OpenAQ");
 

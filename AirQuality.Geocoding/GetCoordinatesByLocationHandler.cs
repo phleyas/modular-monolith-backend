@@ -12,7 +12,7 @@ namespace AirQuality.Geocoding
         }
         public async Task<GeoLocation> ExecuteAsync(GetCoordinatesByLocationCommand command, CancellationToken ct)
         {
-            return await _geocoding.GetCoordinatesByLocationAsync(command.Country, command.City); ;
+            return await _geocoding.GetCoordinatesByLocationAsync(command.Country, command.City);
         }
     }
 }

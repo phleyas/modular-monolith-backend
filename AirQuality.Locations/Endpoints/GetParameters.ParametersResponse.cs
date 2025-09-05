@@ -2,8 +2,8 @@
 
 namespace AirQuality.Locations.Endpoints
 {
-    public class LocationsResponse
+    public class ParametersResponse
     {
-        public List<LocationDTO> Locations { get; set; }
+        public List<ParameterDTO> Parameters { get; set; }
     }
 }

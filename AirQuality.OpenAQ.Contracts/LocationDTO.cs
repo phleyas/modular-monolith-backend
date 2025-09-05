@@ -2,7 +2,7 @@
 
 namespace AirQuality.OpenAQ.Contracts
 {
-    public class SensorLocationDTO
+    public class LocationDTO
     {
         [JsonPropertyName("id")]
         public int Id { get; set; }

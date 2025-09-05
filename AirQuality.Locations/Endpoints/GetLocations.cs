@@ -22,7 +22,7 @@ namespace AirQuality.Locations.Endpoints
                 ThrowIfAnyErrors();
                 return;
             }
-            var geo = await new GetCoordinatesByLocationCommand() { City = req.City!, Country = req.Country! }.ExecuteAsync<GeoLocation>();
+            var geo = await new GetCoordinatesByLocationCommand() { City = req.City!, Country = req.Country! }.ExecuteAsync();
             if (geo is null)
             {
                 await Send.NotFoundAsync();
@@ -37,15 +37,15 @@ namespace AirQuality.Locations.Endpoints
                 return;
             }
 
-            var openAQ = await new GetLocationsByCoordinatesCommand() { latitude = lat, longuitude = lon, radius = 10000, limit = 10 }.ExecuteAsync();
-            if (openAQ is null)
+            var locations = await new GetLocationsByCoordinatesCommand() { latitude = lat, longuitude = lon, radius = 10000, limit = 10 }.ExecuteAsync();
+            if (locations is null || locations.Count == 0)
             {
                 AddError("Could not find any locations");
                 ThrowIfAnyErrors();
                 return;
             }
 
-            await Send.OkAsync(new LocationsResponse() { Locations = openAQ.Results });
+            await Send.OkAsync(new LocationsResponse() { Locations = locations });
         }
     }
 }
