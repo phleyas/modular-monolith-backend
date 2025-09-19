@@ -37,7 +37,7 @@ builder.Services.AddHttpLogging(o => { });
 
 builder.Services.AddFastEndpoints(o =>
 {
-    o.SourceGeneratorDiscoveredTypes.AddRange(AirQuality.Locations.DiscoveredTypes.All);
+    o.SourceGeneratorDiscoveredTypes.AddRange(AirQuality.Api.DiscoveredTypes.All);
     o.SourceGeneratorDiscoveredTypes.AddRange(AirQuality.Geocoding.DiscoveredTypes.All);
     o.SourceGeneratorDiscoveredTypes.AddRange(AirQuality.OpenAQ.DiscoveredTypes.All);
 });

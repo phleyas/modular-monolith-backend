@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirQuality.Geocoding", "Air
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirQuality.Geocoding.Contracts", "AirQuality.Geocoding.Contracts\AirQuality.Geocoding.Contracts.csproj", "{A27043A2-517B-CD26-0D55-014685BDCAE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirQuality.Locations", "AirQuality.Locations\AirQuality.Locations.csproj", "{80F9B431-C036-587A-0590-689448D625E2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirQuality.OpenAQ", "AirQuality.OpenAQ\AirQuality.OpenAQ.csproj", "{17699D75-483C-188C-4C8A-B4462536922F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirQuality.OpenAQ.Contracts", "AirQuality.OpenAQ.Contracts\AirQuality.OpenAQ.Contracts.csproj", "{049E42D4-1582-C3FC-4CD5-77267A2A0400}"
@@ -18,6 +16,8 @@ EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{81DDED9D-158B-E303-5F62-77A2896D2A5A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirQuality.Shared", "AirQuality.Shared\AirQuality.Shared.csproj", "{D3EE3521-6708-4A56-9C7D-921D83BB3FF9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +37,6 @@ Global
 		{A27043A2-517B-CD26-0D55-014685BDCAE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A27043A2-517B-CD26-0D55-014685BDCAE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A27043A2-517B-CD26-0D55-014685BDCAE7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{80F9B431-C036-587A-0590-689448D625E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{80F9B431-C036-587A-0590-689448D625E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{80F9B431-C036-587A-0590-689448D625E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{80F9B431-C036-587A-0590-689448D625E2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{17699D75-483C-188C-4C8A-B4462536922F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{17699D75-483C-188C-4C8A-B4462536922F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17699D75-483C-188C-4C8A-B4462536922F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -53,6 +49,10 @@ Global
 		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3EE3521-6708-4A56-9C7D-921D83BB3FF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3EE3521-6708-4A56-9C7D-921D83BB3FF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3EE3521-6708-4A56-9C7D-921D83BB3FF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3EE3521-6708-4A56-9C7D-921D83BB3FF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

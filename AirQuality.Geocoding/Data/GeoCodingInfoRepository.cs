@@ -27,7 +27,6 @@ namespace AirQuality.Geocoding.Data
         public async Task UpdateAsync(GeoCodingInfo geoCodingInfo)
         {
             _context.geoCodingInfos.Update(geoCodingInfo);
-            await _context.SaveChangesAsync();
         }
 
         // Delete a GeoCodingInfo by its ID
@@ -37,7 +36,6 @@ namespace AirQuality.Geocoding.Data
             if (geoCodingInfo != null)
             {
                 _context.geoCodingInfos.Remove(geoCodingInfo);
-                await _context.SaveChangesAsync();
             }
         }
 
@@ -91,6 +89,11 @@ namespace AirQuality.Geocoding.Data
 
             // Add the GeoCodingInfo to the database
             await _context.geoCodingInfos.AddAsync(geoCodingInfo);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task SaveChangesAsync()
+        {
             await _context.SaveChangesAsync();
         }
     }

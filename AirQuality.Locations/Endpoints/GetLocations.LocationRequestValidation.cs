@@ -1,7 +1,6 @@
-﻿using AirQuality.Locations.Endpoints;
-using FluentValidation;
+﻿using FluentValidation;
 
-namespace AirQuality.Locations.Validations
+namespace AirQuality.Locations.Endpoints
 {
     internal class LocationsRequestValidation : AbstractValidator<LocationsRequest>
     {

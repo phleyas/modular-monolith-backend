@@ -1,4 +1,5 @@
 ﻿using AirQuality.OpenAQ.Data;
+using AirQuality.Shared;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,7 +33,11 @@ namespace AirQuality.OpenAQ
 
             services.AddDatabaseDeveloperPageExceptionFilter();
 
+            services.AddHostedService<DbInitializerHostedService<OpenAQDbContext>>();
+
             services.AddScoped<IParametersRepository, ParametersRepository>();
+
+            services.AddScoped<ILocationsRepository, LocationsRepository>();
 
 
             logger.Information("{Module} module services registered", "OpenAQ");

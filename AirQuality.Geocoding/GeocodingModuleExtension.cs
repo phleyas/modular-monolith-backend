@@ -1,4 +1,5 @@
 ﻿using AirQuality.Geocoding.Data;
+using AirQuality.Shared;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -39,7 +40,9 @@ namespace AirQuality.Geocoding
                            options.UseNpgsql(defaultConnection));
 
             services.AddDatabaseDeveloperPageExceptionFilter();
-            services.AddHostedService<GeocodingDbInitializerHostedService>();
+
+            services.AddHostedService<DbInitializerHostedService<GeoCodingDBContext>>();
+
             services.AddScoped<IGeoCodingInfoRepository, GeoCodingInfoRepository>();
 
 

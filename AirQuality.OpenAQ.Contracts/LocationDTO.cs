@@ -25,7 +25,7 @@ namespace AirQuality.OpenAQ.Contracts
         [JsonPropertyName("instruments")]
         public List<IdNameDTO>? Instruments { get; set; }
         [JsonPropertyName("sensors")]
-        public List<SensorDTO>? Sensors { get; set; }
+        public List<LocationSensorDTO> Sensors { get; set; }
         [JsonPropertyName("coordinates")]
         public CoordinatesDTO? Coordinates { get; set; }
         [JsonPropertyName("licenses")]
@@ -38,6 +38,17 @@ namespace AirQuality.OpenAQ.Contracts
         public DateDTO? DatetimeFirst { get; set; }
         [JsonPropertyName("datetimeLast")]
         public DateDTO? DatetimeLast { get; set; }
+        [JsonPropertyName("lastUpdate")]
+        public DateTime? LastUpdate { get; set; }
+    }
+    public class LocationSensorDTO
+    {
+        [JsonPropertyName("id")]
+        public int Id { get; set; }
+        [JsonPropertyName("name")]
+        public string Name { get; set; }
+        [JsonPropertyName("parameter")]
+        public ParameterDTO? Parameter { get; set; }
     }
     public class CoordinatesDTO
     {

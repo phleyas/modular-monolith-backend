@@ -10,5 +10,6 @@ namespace AirQuality.Geocoding.Data
         Task DeleteAsync(int id);
         Task<GeoCodingInfo> GetByCityAndCountryAsync(string city, string country);
         Task AddGeoCodingInfoWithLocationAsync(GeoCodingInfo geoCodingInfo);
+        Task SaveChangesAsync();
     }
 }

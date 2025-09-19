@@ -37,7 +37,6 @@ namespace AirQuality.Geocoding.Integration
             };
 
             await _repository.AddGeoCodingInfoWithLocationAsync(newGeoCodingInfo);
-
         }
     }
 }

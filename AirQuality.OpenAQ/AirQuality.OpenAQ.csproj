@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AirQuality.OpenAQ.Contracts\AirQuality.OpenAQ.Contracts.csproj" />
+    <ProjectReference Include="..\AirQuality.Shared\AirQuality.Shared.csproj" />
   </ItemGroup>
 
 </Project>

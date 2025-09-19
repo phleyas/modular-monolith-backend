@@ -24,7 +24,6 @@
   <ItemGroup>
 	  <ProjectReference Include="..\AirQuality.Geocoding\AirQuality.Geocoding.csproj" />
 	  <ProjectReference Include="..\AirQuality.OpenAQ\AirQuality.OpenAQ.csproj" />
-	  <ProjectReference Include="..\AirQuality.Locations\AirQuality.Locations.csproj" />
   </ItemGroup>
 
 </Project>
