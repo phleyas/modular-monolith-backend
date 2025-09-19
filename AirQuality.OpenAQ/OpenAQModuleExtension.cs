@@ -29,6 +29,7 @@ namespace AirQuality.OpenAQ
             var defaultConnection = config["connection_strings_open_aq"];
             services.AddDbContext<OpenAQDbContext>(options =>
                            options.UseNpgsql(defaultConnection));
+
             services.AddDatabaseDeveloperPageExceptionFilter();
 
             services.AddScoped<IParametersRepository, ParametersRepository>();

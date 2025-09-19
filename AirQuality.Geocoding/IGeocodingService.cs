@@ -1,4 +1,5 @@
-﻿using AirQuality.Geolocation.Contracts;
+﻿using AirQuality.Geocoding.Contracts;
+
 namespace AirQuality.Geocoding
 {
     internal interface IGeocodingService

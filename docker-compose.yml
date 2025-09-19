@@ -41,6 +41,9 @@ services:
             - source: connection_strings_open_aq
               target: connection_strings_open_aq
               mode: 0444
+            - source: connection_strings_geocoding
+              target: connection_strings_geocoding
+              mode: 0444
 
 secrets:
    nominatim_user_agent:
@@ -53,3 +56,5 @@ secrets:
         file: ../secrets/postgres_password.txt 
    connection_strings_open_aq:
         file: ../secrets/connection_strings_open_aq.txt 
+   connection_strings_geocoding:
+        file: ../secrets/connection_strings_geocoding.txt 

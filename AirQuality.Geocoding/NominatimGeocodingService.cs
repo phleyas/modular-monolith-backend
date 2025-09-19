@@ -1,4 +1,4 @@
-﻿using AirQuality.Geolocation.Contracts;
+﻿using AirQuality.Geocoding.Contracts;
 using System.Diagnostics;
 using System.Text.Json;
 

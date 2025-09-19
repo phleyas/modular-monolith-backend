@@ -1,4 +1,5 @@
-﻿using AirQuality.Geolocation.Contracts;
+﻿using AirQuality.Geocoding.Contracts;
+using AirQuality.Locations.Validations;
 using AirQuality.OpenAQ.Contracts;
 using FastEndpoints;
 using System.Globalization;
@@ -16,18 +17,32 @@ namespace AirQuality.Locations.Endpoints
 
         public override async Task HandleAsync(LocationsRequest req, CancellationToken ct)
         {
-            if (string.IsNullOrWhiteSpace(req.Country) || string.IsNullOrWhiteSpace(req.City))
+            var validation = new LocationsRequestValidation();
+            var validationResult = await validation.ValidateAsync(req, ct);
+
+            if (!validationResult.IsValid)
             {
-                AddError("Country and City are required.");
+                foreach (var error in validationResult.Errors)
+                {
+                    AddError(error.ErrorMessage);
+                }
                 ThrowIfAnyErrors();
                 return;
             }
-            var geo = await new GetCoordinatesByLocationCommand() { City = req.City!, Country = req.Country! }.ExecuteAsync();
+
+            var geo = await new GetCoordinatesByLocationCommand() { City = req.CityPurged!, Country = req.CountryPurged! }.ExecuteAsync();
             if (geo is null)
             {
                 await Send.NotFoundAsync();
                 return;
             }
+
+            await PublishAsync(new UpdateGeoCodingInfoEvent()
+            {
+                City = req.CityPurged,
+                Country = req.CountryPurged,
+                GeoLocation = geo
+            });
 
             if (!double.TryParse(geo.Lat, NumberStyles.Float, CultureInfo.InvariantCulture, out var lat) ||
              !double.TryParse(geo.Lon, NumberStyles.Float, CultureInfo.InvariantCulture, out var lon))

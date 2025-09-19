@@ -40,7 +40,11 @@ builder.Services.AddFastEndpoints(o =>
     o.SourceGeneratorDiscoveredTypes.AddRange(AirQuality.Locations.DiscoveredTypes.All);
     o.SourceGeneratorDiscoveredTypes.AddRange(AirQuality.Geocoding.DiscoveredTypes.All);
     o.SourceGeneratorDiscoveredTypes.AddRange(AirQuality.OpenAQ.DiscoveredTypes.All);
-}).SwaggerDocument(o => o.ShortSchemaNames = true);
+});
+builder.Services.SwaggerDocument(o =>
+{
+    o.ShortSchemaNames = true;
+});
 
 builder.Services.AddHttpClient();
 

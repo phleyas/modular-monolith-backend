@@ -1,6 +1,9 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using AirQuality.Geocoding.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ILogger = Serilog.ILogger;
+
 namespace AirQuality.Geocoding
 {
     public static class GeocodingModuleServiceExtensions
@@ -28,6 +31,17 @@ namespace AirQuality.Geocoding
                     client.DefaultRequestHeaders.Referrer = refUri;
                 }
             });
+
+
+
+            var defaultConnection = config["connection_strings_geocoding"];
+            services.AddDbContext<GeoCodingDBContext>(options =>
+                           options.UseNpgsql(defaultConnection));
+
+            services.AddDatabaseDeveloperPageExceptionFilter();
+            services.AddHostedService<GeocodingDbInitializerHostedService>();
+            services.AddScoped<IGeoCodingInfoRepository, GeoCodingInfoRepository>();
+
 
             logger.Information("{Module} module services registered", "Geocoding");
 

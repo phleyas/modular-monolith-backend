@@ -1,6 +1,6 @@
 ﻿using FastEndpoints;
 
-namespace AirQuality.Geolocation.Contracts
+namespace AirQuality.Geocoding.Contracts
 {
     public class GetCoordinatesByLocationCommand : ICommand<GeoLocation>
     {
