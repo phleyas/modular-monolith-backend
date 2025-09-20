@@ -130,11 +130,17 @@ namespace AirQuality.OpenAQ.Data
 
         public async Task RemoveLocationAsync(int id)
         {
-            var existing = await _context.Locations.FirstOrDefaultAsync(l => l.Id == id);
-            if (existing is not null)
-            {
-                _context.Locations.Remove(existing);
-            }
+            var existing = await _context.Locations
+                .Include(l => l.Sensors)
+                .FirstOrDefaultAsync(l => l.Id == id);
+
+            if (existing is null)
+                return;
+
+            if (existing.Sensors is { Count: > 0 })
+                _context.RemoveRange(existing.Sensors);
+
+            _context.Locations.Remove(existing);
         }
 
         private void NormalizeCountryDates(LocationDTO location)

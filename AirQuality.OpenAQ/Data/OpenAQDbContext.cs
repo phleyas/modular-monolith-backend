@@ -32,7 +32,8 @@ namespace AirQuality.OpenAQ.Data
                 // Sensors are regular child entities (keep if IDs are unique per DB)
                 e.HasMany(s => s.Sensors)
                  .WithOne()
-                 .HasForeignKey("LocationId");
+                 .HasForeignKey("LocationId")
+                 .OnDelete(DeleteBehavior.Cascade); // ensure DB cascade
 
                 // Licenses as owned collection to avoid global PK clashes on Id
                 e.OwnsMany(s => s.Licenses, b =>

@@ -6,8 +6,8 @@ services:
         - POSTGRES_DB=openaq
         - POSTGRES_USER=postgres
         - POSTGRES_PASSWORD_FILE=/run/secrets/postgres_password
-        # volumes:
-        #   - ./.containers/products-db:/var/lib/postgresql/data
+        volumes:
+          - ./.containers/airquality.database:/var/lib/postgresql/data
         ports:
             - 5432:5432
         healthcheck:
