@@ -22,15 +22,6 @@ namespace AirQuality.OpenAQ.Integrations
             var repo = scope.ServiceProvider.GetRequiredService<ISensorRepository>();
             foreach (var incoming in eventModel.Sensors)
             {
-                var existing = await repo.GetSensorByIdAsync(incoming.Id);
-
-                if (existing is not null && existing.LastUpdate.HasValue && existing.LastUpdate.Value <= DateTime.UtcNow.AddHours(-1))
-                {
-                    await repo.RemoveSensorAsync(existing.Id);
-                    continue;
-                }
-
-                // Always apply update (insert or modify) for non-stale sensors
                 await repo.UpdateSensorAsync(incoming);
             }
             await repo.SaveChangesAsync();

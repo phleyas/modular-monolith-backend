@@ -190,6 +190,8 @@ namespace AirQuality.OpenAQ.Data
             await NormalizeSharedReferencesAsync(location);
 
             var existing = await _context.Locations
+                .Include(l => l.Sensors) // load sensors so EF knows existing ones
+                .ThenInclude(s => s.Latest) // include owned latest to avoid duplicate inserts
                 .FirstOrDefaultAsync(l => l.Id == location.Id);
 
             if (existing is not null)
@@ -203,7 +205,7 @@ namespace AirQuality.OpenAQ.Data
                 existing.IsMobile = location.IsMobile;
                 existing.IsMonitor = location.IsMonitor;
                 existing.Instruments = location.Instruments;
-                existing.Sensors = location.Sensors;
+                // existing.Sensors will be updated individually below
                 existing.Coordinates = location.Coordinates;
                 existing.Licenses = location.Licenses;
                 existing.Bounds = location.Bounds;
@@ -211,9 +213,54 @@ namespace AirQuality.OpenAQ.Data
                 existing.DatetimeFirst = location.DatetimeFirst;
                 existing.DatetimeLast = location.DatetimeLast;
                 existing.LastUpdate = location.LastUpdate;
+
+                if (location.Sensors is not null)
+                {
+                    foreach (var incomingSensor in location.Sensors)
+                    {
+                        if (incomingSensor is null) continue;
+
+                        // Resolve parameter reference again if necessary
+                        if (incomingSensor.Parameter is not null)
+                            incomingSensor.Parameter = await ResolveParameterAsync(incomingSensor.Parameter);
+
+                        incomingSensor.Latest ??= new LatestDTO { HasValueMarker = true };
+
+                        var existingSensor = existing.Sensors?.FirstOrDefault(s => s.Id == incomingSensor.Id);
+                        if (existingSensor is not null)
+                        {
+                            existingSensor.Name = incomingSensor.Name;
+                            existingSensor.Parameter = incomingSensor.Parameter;
+                            existingSensor.DatetimeFirst = incomingSensor.DatetimeFirst;
+                            existingSensor.DatetimeLast = incomingSensor.DatetimeLast;
+                            existingSensor.Coverage = incomingSensor.Coverage;
+                            existingSensor.Latest = incomingSensor.Latest;
+                            existingSensor.Summary = incomingSensor.Summary;
+                            existingSensor.LastUpdate = incomingSensor.LastUpdate;
+                            existingSensor.LocationId = existing.Id;
+                        }
+                        else
+                        {
+                            incomingSensor.LocationId = existing.Id;
+                            await _context.Sensors.AddAsync(incomingSensor);
+                        }
+                    }
+                }
             }
             else
             {
+                // New location
+                if (location.Sensors is not null)
+                {
+                    foreach (var sensor in location.Sensors)
+                    {
+                        if (sensor is null) continue;
+                        if (sensor.Parameter is not null)
+                            sensor.Parameter = await ResolveParameterAsync(sensor.Parameter);
+                        sensor.Latest ??= new LatestDTO { HasValueMarker = true };
+                        sensor.LocationId = location.Id; // explicit since PK not generated
+                    }
+                }
                 await _context.Locations.AddAsync(location);
             }
         }

@@ -24,21 +24,8 @@ namespace AirQuality.OpenAQ.Integrations
 
             foreach (var incoming in eventModel.Locations)
             {
-                var existing = await repo.GetLocationByIdAsync(incoming.Id);
+                await repo.UpdateLocationAsync(incoming);
 
-                if (existing is not null)
-                {
-                    if (existing.LastUpdate.HasValue && existing.LastUpdate.Value <= DateTime.UtcNow.AddHours(-1))
-                    {
-                        // older than 1 hour -> remove
-                        await repo.RemoveLocationAsync(existing.Id);
-                        continue;
-                    }
-                }
-                else
-                {
-                    await repo.UpdateLocationAsync(incoming);
-                }
             }
 
             await repo.SaveChangesAsync();
