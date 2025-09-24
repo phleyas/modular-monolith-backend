@@ -24,20 +24,14 @@ namespace AirQuality.OpenAQ.Integrations
             {
                 var existing = await repo.GetSensorByIdAsync(incoming.Id);
 
-                if (existing is not null)
+                if (existing is not null && existing.LastUpdate.HasValue && existing.LastUpdate.Value <= DateTime.UtcNow.AddHours(-1))
                 {
-                    if (existing.LastUpdate.HasValue && existing.LastUpdate.Value <= DateTime.UtcNow.AddHours(-1))
-                    {
-                        // older than 1 hour -> remove
-                        await repo.RemoveSensorAsync(existing.Id);
-                        continue;
-                    }
+                    await repo.RemoveSensorAsync(existing.Id);
+                    continue;
                 }
-                else
-                {
 
-                    await repo.UpdateSensorAsync(incoming);
-                }
+                // Always apply update (insert or modify) for non-stale sensors
+                await repo.UpdateSensorAsync(incoming);
             }
             await repo.SaveChangesAsync();
         }
