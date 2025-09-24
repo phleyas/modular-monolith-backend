@@ -29,24 +29,18 @@ namespace AirQuality.OpenAQ.Data
                 e.OwnsOne(s => s.DatetimeFirst);
                 e.OwnsOne(s => s.DatetimeLast);
 
-                // Sensors are regular child entities (keep if IDs are unique per DB)
                 e.HasMany(s => s.Sensors)
                  .WithOne()
                  .HasForeignKey("LocationId")
-                 .OnDelete(DeleteBehavior.Cascade); // ensure DB cascade
-
-                // Licenses as owned collection to avoid global PK clashes on Id
+                 .OnDelete(DeleteBehavior.Cascade);
                 e.OwnsMany(s => s.Licenses, b =>
                 {
                     b.ToTable("Locations_Licenses");
                     b.WithOwner().HasForeignKey("LocationId");
-                    b.HasKey("LocationId", "Id"); // composite key scoped to owner
+                    b.HasKey("LocationId", "Id");
                     b.Property(p => p.Id).HasColumnName("LicenseId");
                     b.Property(p => p.Name).HasColumnName("LicenseName");
-                    b.Property(p => p.DateFrom);
-                    b.Property(p => p.DateTo);
 
-                    // Nested owned object for attribution
                     b.OwnsOne(p => p.Attribution, a =>
                     {
                         a.Property(x => x.Id).HasColumnName("AttributionId");
@@ -55,7 +49,6 @@ namespace AirQuality.OpenAQ.Data
                     });
                 });
 
-                // Owned collection with explicit table/FK/PK for instruments
                 e.OwnsMany(s => s.Instruments, b =>
                 {
                     b.ToTable("Locations_Instruments");
@@ -64,6 +57,28 @@ namespace AirQuality.OpenAQ.Data
                     b.Property(p => p.Id).HasColumnName("InstrumentId");
                     b.Property(p => p.Name).HasColumnName("InstrumentName");
                 });
+            });
+
+            modelBuilder.Entity<SensorDTO>(s =>
+            {
+                s.HasKey(x => x.Id);
+                s.HasOne(x => x.Parameter).WithMany();
+                s.OwnsOne(x => x.DatetimeFirst);
+                s.OwnsOne(x => x.DatetimeLast);
+                s.OwnsOne(x => x.Coverage, cov =>
+                {
+                    cov.OwnsOne(c => c.DatetimeFrom);
+                    cov.OwnsOne(c => c.DatetimeTo);
+                });
+
+                s.OwnsOne(x => x.Latest, l =>
+                {
+                    l.Property(p => p.HasValueMarker).IsRequired();
+                    l.OwnsOne(p => p.Datetime);
+                    l.OwnsOne(p => p.Coordinates);
+                });
+
+                s.OwnsOne(x => x.Summary);
             });
 
             var utcConverter = new ValueConverter<DateTime, DateTime>(

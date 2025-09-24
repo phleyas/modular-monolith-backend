@@ -5,7 +5,7 @@ namespace AirQuality.OpenAQ.Contracts
     public class SensorDTO
     {
         [JsonPropertyName("id")]
-        public int? Id { get; set; }
+        public int Id { get; set; }
 
         [JsonPropertyName("name")]
         public string Name { get; set; }
@@ -30,14 +30,18 @@ namespace AirQuality.OpenAQ.Contracts
     }
     public class LatestDTO
     {
+        // Required marker so EF can detect existence even if all other props are null
+        [JsonIgnore]
+        public bool HasValueMarker { get; set; } = true;
+
         [JsonPropertyName("datetime")]
-        public DateDTO Datetime { get; set; }
+        public DateDTO? Datetime { get; set; }
 
         [JsonPropertyName("value")]
         public double? Value { get; set; }
 
         [JsonPropertyName("coordinates")]
-        public CoordinatesDTO Coordinates { get; set; }
+        public CoordinatesDTO? Coordinates { get; set; }
     }
     public class SummaryDTO
     {
@@ -45,19 +49,19 @@ namespace AirQuality.OpenAQ.Contracts
         public double? Min { get; set; }
 
         [JsonPropertyName("q02")]
-        public object Q02 { get; set; }
+        public double? Q02 { get; set; }
 
         [JsonPropertyName("q25")]
-        public object Q25 { get; set; }
+        public double? Q25 { get; set; }
 
         [JsonPropertyName("median")]
-        public object Median { get; set; }
+        public double? Median { get; set; }
 
         [JsonPropertyName("q75")]
-        public object Q75 { get; set; }
+        public double? Q75 { get; set; }
 
         [JsonPropertyName("q98")]
-        public object Q98 { get; set; }
+        public double? Q98 { get; set; }
 
         [JsonPropertyName("max")]
         public double? Max { get; set; }
@@ -66,7 +70,7 @@ namespace AirQuality.OpenAQ.Contracts
         public double? Avg { get; set; }
 
         [JsonPropertyName("sd")]
-        public object Sd { get; set; }
+        public double? Sd { get; set; }
     }
     public class CoverageDTO
     {
