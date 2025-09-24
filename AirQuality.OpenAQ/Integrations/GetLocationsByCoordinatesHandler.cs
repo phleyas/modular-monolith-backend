@@ -32,6 +32,10 @@ namespace AirQuality.OpenAQ.Integrations
             var api = await _openAQService.GetLocationsByCoordinatesAsync(lat, lon, radiusMeters, command.limit);
             if (api is null || api.Results is null || api.Results.Count == 0)
                 return [];
+            foreach (var location in api.Results)
+            {
+                location.LastUpdate = DateTime.UtcNow;
+            }
             return api.Results;
         }
     }

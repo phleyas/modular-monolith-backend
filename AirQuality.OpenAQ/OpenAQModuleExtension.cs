@@ -29,7 +29,11 @@ namespace AirQuality.OpenAQ
 
             var defaultConnection = config["connection_strings_open_aq"];
             services.AddDbContext<OpenAQDbContext>(options =>
-                           options.UseNpgsql(defaultConnection));
+            {
+                options.UseNpgsql(defaultConnection);
+                options.EnableDetailedErrors();
+                options.EnableSensitiveDataLogging();
+            });
 
             services.AddDatabaseDeveloperPageExceptionFilter();
 
@@ -38,6 +42,8 @@ namespace AirQuality.OpenAQ
             services.AddScoped<IParametersRepository, ParametersRepository>();
 
             services.AddScoped<ILocationsRepository, LocationsRepository>();
+
+            services.AddScoped<ISensorRepository, SensorRepository>();
 
 
             logger.Information("{Module} module services registered", "OpenAQ");

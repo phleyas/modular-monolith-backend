@@ -50,7 +50,7 @@ namespace AirQuality.OpenAQ
             return result;
         }
 
-        public async Task<OpenAQResponse<SensorDTO>> GetMeasurementsByLocationIdAsync(int id)
+        public async Task<OpenAQResponse<SensorDTO>> GetSensorsByLocationIdAsync(int id)
         {
             var response = await _httpClient.GetAsync(
              $"locations/{id}/sensors"

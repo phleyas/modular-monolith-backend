@@ -8,6 +8,7 @@ namespace AirQuality.OpenAQ.Data
     {
         public DbSet<ParameterDTO> Parameters { get; set; }
         public DbSet<LocationDTO> Locations { get; set; }
+        public DbSet<SensorDTO> Sensors { get; set; }
 
         public OpenAQDbContext(DbContextOptions<OpenAQDbContext> options) : base(options)
         {
@@ -29,10 +30,6 @@ namespace AirQuality.OpenAQ.Data
                 e.OwnsOne(s => s.DatetimeFirst);
                 e.OwnsOne(s => s.DatetimeLast);
 
-                e.HasMany(s => s.Sensors)
-                 .WithOne()
-                 .HasForeignKey("LocationId")
-                 .OnDelete(DeleteBehavior.Cascade);
                 e.OwnsMany(s => s.Licenses, b =>
                 {
                     b.ToTable("Locations_Licenses");
@@ -61,8 +58,13 @@ namespace AirQuality.OpenAQ.Data
 
             modelBuilder.Entity<SensorDTO>(s =>
             {
+                s.ToTable("SensorDTO");
                 s.HasKey(x => x.Id);
+
+                s.Property(x => x.LocationId);
+
                 s.HasOne(x => x.Parameter).WithMany();
+
                 s.OwnsOne(x => x.DatetimeFirst);
                 s.OwnsOne(x => x.DatetimeLast);
                 s.OwnsOne(x => x.Coverage, cov =>
@@ -73,7 +75,9 @@ namespace AirQuality.OpenAQ.Data
 
                 s.OwnsOne(x => x.Latest, l =>
                 {
-                    l.Property(p => p.HasValueMarker).IsRequired();
+                    l.ToTable("SensorLatest");
+                    l.WithOwner().HasForeignKey("SensorId");
+                    l.Property(p => p.HasValueMarker).IsRequired().HasDefaultValue(true);
                     l.OwnsOne(p => p.Datetime);
                     l.OwnsOne(p => p.Coordinates);
                 });

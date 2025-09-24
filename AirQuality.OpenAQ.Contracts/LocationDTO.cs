@@ -25,7 +25,7 @@ namespace AirQuality.OpenAQ.Contracts
         [JsonPropertyName("instruments")]
         public List<IdNameDTO>? Instruments { get; set; }
         [JsonPropertyName("sensors")]
-        public List<LocationSensorDTO> Sensors { get; set; }
+        public List<SensorDTO>? Sensors { get; set; }  // ensure this is SensorDTO
         [JsonPropertyName("coordinates")]
         public CoordinatesDTO? Coordinates { get; set; }
         [JsonPropertyName("licenses")]

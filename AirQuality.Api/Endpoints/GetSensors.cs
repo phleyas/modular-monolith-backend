@@ -18,13 +18,22 @@ namespace AirQuality.Api.Endpoints
                 ThrowIfAnyErrors();
                 return;
             }
+
             var sensors = await new GetSensorsByLocationIdCommand() { locationId = req.LocationId.Value }.ExecuteAsync();
+
             if (sensors is null || sensors.Count == 0)
             {
                 AddError("Could not find any meassurements");
                 ThrowIfAnyErrors();
                 return;
             }
+
+            await PublishAsync(new UpdateSensorsEvent()
+            {
+                Sensors = sensors,
+                LocationId = req.LocationId.Value
+            });
+
             await Send.OkAsync(new SensorsResponse() { Sensors = sensors });
         }
     }

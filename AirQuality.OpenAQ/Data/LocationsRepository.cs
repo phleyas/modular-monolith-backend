@@ -41,6 +41,7 @@ namespace AirQuality.OpenAQ.Data
                 .ThenInclude(s => s.Parameter)
                 .AsNoTracking()
                 .Where(l => l.Coordinates != null)
+                .Where(l => l.LastUpdate > DateTime.UtcNow.AddHours(-1))
                 .ToListAsync();
 
             var filtered = candidates
@@ -72,39 +73,7 @@ namespace AirQuality.OpenAQ.Data
         {
             foreach (var location in locations)
             {
-                // Fill missing country dates from the location dates (fallback)
-                NormalizeCountryDates(location);
-
-                // Ensure related Parameters exist and are tracked uniquely
-                await NormalizeSharedReferencesAsync(location);
-
-                var existing = await _context.Locations
-                    .FirstOrDefaultAsync(l => l.Id == location.Id);
-
-                if (existing is not null)
-                {
-                    existing.Name = location.Name;
-                    existing.Locality = location.Locality;
-                    existing.Timezone = location.Timezone;
-                    existing.Country = location.Country;
-                    existing.Owner = location.Owner;
-                    existing.Provider = location.Provider;
-                    existing.IsMobile = location.IsMobile;
-                    existing.IsMonitor = location.IsMonitor;
-                    existing.Instruments = location.Instruments;
-                    existing.Sensors = location.Sensors;
-                    existing.Coordinates = location.Coordinates;
-                    existing.Licenses = location.Licenses;
-                    existing.Bounds = location.Bounds;
-                    existing.Distance = location.Distance;
-                    existing.DatetimeFirst = location.DatetimeFirst;
-                    existing.DatetimeLast = location.DatetimeLast;
-                    existing.LastUpdate = DateTime.UtcNow;
-                }
-                else
-                {
-                    await _context.Locations.AddAsync(location);
-                }
+                await UpdateLocationAsync(location);
             }
         }
 
@@ -210,6 +179,43 @@ namespace AirQuality.OpenAQ.Data
 
             await _context.Parameters.AddAsync(newParam);
             return newParam;
+        }
+
+        public async Task UpdateLocationAsync(LocationDTO location)
+        {
+            // Fill missing country dates from the location dates (fallback)
+            NormalizeCountryDates(location);
+
+            // Ensure related Parameters exist and are tracked uniquely
+            await NormalizeSharedReferencesAsync(location);
+
+            var existing = await _context.Locations
+                .FirstOrDefaultAsync(l => l.Id == location.Id);
+
+            if (existing is not null)
+            {
+                existing.Name = location.Name;
+                existing.Locality = location.Locality;
+                existing.Timezone = location.Timezone;
+                existing.Country = location.Country;
+                existing.Owner = location.Owner;
+                existing.Provider = location.Provider;
+                existing.IsMobile = location.IsMobile;
+                existing.IsMonitor = location.IsMonitor;
+                existing.Instruments = location.Instruments;
+                existing.Sensors = location.Sensors;
+                existing.Coordinates = location.Coordinates;
+                existing.Licenses = location.Licenses;
+                existing.Bounds = location.Bounds;
+                existing.Distance = location.Distance;
+                existing.DatetimeFirst = location.DatetimeFirst;
+                existing.DatetimeLast = location.DatetimeLast;
+                existing.LastUpdate = location.LastUpdate;
+            }
+            else
+            {
+                await _context.Locations.AddAsync(location);
+            }
         }
     }
 }
