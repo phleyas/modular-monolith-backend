@@ -33,8 +33,7 @@ namespace AirQuality.OpenAQ.Data
 
         public async Task<List<LocationDTO>> GetLocationsByCoordinatesAsync(double latitude, double longitude, double radiusMeters, int? limit)
         {
-            // Convert meters to kilometers for HaversineKm comparison
-            var radiusKm = radiusMeters / 1000.0;
+
 
             var candidates = await _context.Locations
                 .Include(l => l.Sensors)
@@ -55,10 +54,10 @@ namespace AirQuality.OpenAQ.Data
                 .Select(x => new
                 {
                     x.Location,
-                    DistanceKm = HaversineKm(latitude, longitude, x.Lat!.Value, x.Lon!.Value)
+                    Distance = GetDistanceInMeters(longitude, latitude, x.Lon!.Value, x.Lat!.Value)
                 })
-                .Where(x => x.DistanceKm <= radiusKm)
-                .OrderBy(x => x.DistanceKm)
+                .Where(x => x.Distance <= radiusMeters)
+                .OrderBy(x => x.Distance)
                 .AsEnumerable();
 
             if (limit is > 0)
@@ -82,19 +81,19 @@ namespace AirQuality.OpenAQ.Data
             await _context.SaveChangesAsync();
         }
 
-        private static double HaversineKm(double lat1, double lon1, double lat2, double lon2)
+        public double GetDistanceInMeters(double longitude, double latitude, double otherLongitude, double otherLatitude)
         {
-            const double R = 6371.0;
-            static double ToRad(double deg) => Math.PI * deg / 180.0;
+            double oneDegree = Math.PI / 180.0;
 
-            var dLat = ToRad(lat2 - lat1);
-            var dLon = ToRad(lon2 - lon1);
-            var a =
-                Math.Sin(dLat / 2) * Math.Sin(dLat / 2) +
-                Math.Cos(ToRad(lat1)) * Math.Cos(ToRad(lat2)) *
-                Math.Sin(dLon / 2) * Math.Sin(dLon / 2);
-            var c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
-            return R * c;
+            var d1 = latitude * oneDegree;
+            var num1 = longitude * oneDegree;
+
+            var d2 = otherLatitude * oneDegree;
+            var num2 = otherLongitude * oneDegree - num1;
+
+            var d3 = Math.Pow(Math.Sin((d2 - d1) / 2.0), 2.0) + Math.Cos(d1) * Math.Cos(d2) * Math.Pow(Math.Sin(num2 / 2.0), 2.0);
+
+            return 6376500.0 * (2.0 * Math.Atan2(Math.Sqrt(d3), Math.Sqrt(1.0 - d3)));
         }
 
         public async Task RemoveLocationAsync(int id)
